@@ -1,0 +1,37 @@
+/*
+ SPDX-License-Identifier: MIT
+ Copyright (c) 2022 Koninklijke Philips N.V., https://www.philips.com
+*/
+
+.mainTable {
+    border: 1px solid white;
+}
+
+.titleCell {
+    text-align: center;
+    border: 1px solid white;
+}
+
+.subTitleCell {
+    text-align: center;
+    border: 1px solid white;
+}
+
+.numberCell {
+    text-align: center;
+    border: 1px solid white;
+}
+
+.numberCellEx {
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    border: 1px solid white;
+}
+
+.maincontainer {
+    flex-direction: column;
+    display: flex;
+    height: 300px;
+    width: 400px;
+}

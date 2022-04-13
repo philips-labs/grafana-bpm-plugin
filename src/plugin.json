@@ -1,0 +1,39 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "panel",
+  "name": "Phlowchart",
+  "id": "philips-phlowchart",
+  "info": {
+    "description": "A Grafana panel plugin to render interactive flowchart visualization of directed graph data.",
+    "author": {
+      "name": "Sanjay Dandekar",
+      "url": "https://www.philips.com"
+    },
+    "keywords": [
+      "flowchart",
+      "grafana",
+      "graph"
+    ],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {
+        "name": "Website",
+        "url": "https://github.com/grafana/grafana-starter-panel"
+      },
+      {
+        "name": "License",
+        "url": "https://github.com/grafana/grafana-starter-panel/blob/master/LICENSE"
+      }
+    ],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=7.0.0",
+    "plugins": []
+  }
+}
