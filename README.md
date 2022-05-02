@@ -179,11 +179,13 @@ Please have a look at the following link to know how to setup the environment fo
 
 ## Known issues
 
-No known issue.
+[Open bug on ReactFlow](https://github.com/wbkd/react-flow/issues/1979)
+
+In order to fix the above issue a minor modification is required to the D3 zoom implementation after executing yarn install to install the dependencies. The fix is described [here](https://github.com/wbkd/react-flow/issues/1979#issuecomment-1087655377) and [here](https://github.com/d3/d3-zoom/commit/0a942f763afc7813d4b1186a1928fcd8f276cf84). After applying the above fix to D3 zoom, it is not possible to zoom in / out using the controls of ReactFlow. Hence in this implementation the zoom in / out controls has been hidden. It is still possible to zoom in / out using the mouse wheel.
 
 ## Contact / Getting help
 
-TODO
+Write an email to [MAINTAINERS](MAINTAINERS.md)
 
 ## License
 
