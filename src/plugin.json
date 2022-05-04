@@ -2,14 +2,15 @@
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
   "type": "panel",
   "name": "Phlowchart",
-  "id": "philips-phlowchart",
+  "id": "philipsgis-phlowchart-panel",
   "info": {
     "description": "A Grafana panel plugin to render interactive flowchart visualization of directed graph data.",
     "author": {
-      "name": "Sanjay Dandekar",
+      "name": "Philips",
       "url": "https://www.philips.com"
     },
     "keywords": [
+      "directedgraph",
       "flowchart",
       "grafana",
       "graph"
@@ -20,20 +21,36 @@
     },
     "links": [
       {
-        "name": "Website",
-        "url": "https://github.com/grafana/grafana-starter-panel"
+        "name": "Github",
+        "url": "https://github.com/philips-labs/grafana-bpm-plugin"
       },
       {
         "name": "License",
-        "url": "https://github.com/grafana/grafana-starter-panel/blob/master/LICENSE"
+        "url": "https://github.com/philips-labs/grafana-bpm-plugin/blob/main/LICENSE"
       }
     ],
-    "screenshots": [],
+    "screenshots": [
+      {
+        "name": "sample1",
+        "path": "img/sample1.png"
+      },
+      {
+        "name": "sample2",
+        "path": "img/screenshot1.png"
+      }
+    ],
     "version": "%VERSION%",
     "updated": "%TODAY%"
   },
   "dependencies": {
-    "grafanaDependency": ">=7.0.0",
-    "plugins": []
+    "grafanaDependency": ">=7.2.0",
+    "plugins": [
+      {
+        "name": "Infinity",
+        "id": "yesoreyeram-infinity-datasource",
+        "type": "datasource",
+        "version": "0.7.10"
+      }
+    ]
   }
 }
