@@ -19,6 +19,9 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+# actual dist folder
+philipsgis-phlowchart-panel
+
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 dist/
 artifacts/
@@ -29,3 +32,5 @@ e2e-results/
 # Editors
 .idea
 
+# Builds
+*.zip

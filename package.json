@@ -1,6 +1,6 @@
 {
   "name": "philips-phlowchart",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A Grafana panel plugin to render interactive flowchart visualization of directed graph data.",
   "scripts": {
     "build": "grafana-toolkit plugin:build",
