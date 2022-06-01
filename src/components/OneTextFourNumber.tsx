@@ -15,8 +15,6 @@ import {
 
 function OneTextFourNumber({ data }: { data: DirectedGraphVertex }) {
 
-    console.log("Rendering OneTextFourNumber");
-
     const theme2 = useTheme2();
 
     return (

@@ -8,7 +8,7 @@
 
 **Screenshot**:
 
-![Screenshot 1](./images/screenshot1.png)
+![Screenshot 1](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/screenshot1.png)
 
 See the [nodes.json](./sample_data/nodes.json) and [edges.json](./sample_data/edges.json) in the sample_data folder for data behind the above graph.
 
@@ -112,13 +112,13 @@ The following table describes attributes of the edge JSON object model:
 
 The above will be rendered as following with default configuration of the panel:
 
-![Sample Graph](./images/sample1.png)
+![Sample Graph](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/sample1.png)
 
 The the infinity plugin to invoke the web service and pass the data to the Phlowchart plugin. Within the infinity data source, configure the vertices API end point as the first series and configure the edges API end point as second series. The Phlowchart plugin will render the directed graph based on the attributes of the vertex.
 
 ### Infinity Data Source Configuration
 
-![Infinity Data Source Configuration](./images/infinity-configuration.png)
+![Infinity Data Source Configuration](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/infinity-configuration.png)
 
 The above diagram shows a sample configuration of the Infinity data source. Following are points to be considered:
 
@@ -132,16 +132,16 @@ Following vertex types are supported and can be specified in the "type" attribut
 
 | Type Name  | Description | Sample Image |
 | ------------- | ------------- | ------------- |
-| twoTextFourNumber  | Display two text values and four number values  | ![twoTextFourNumber](./images/TwoTextFourNumber.png)  |
-| twoTextThreeNumber  | Display two text values and three number values  | ![twoTextThreeNumber](./images/TwoTextThreeNumber.png)  |
-| twoTextTwoNumber  | Display two text values and two number values  | ![twoTextTwoNumber](./images/TwoTextTwoNumber.png)  |
-| twoTextOneNumber  | Display two text values and one number value  | ![twoTextOneNumber](./images/TwoTextOneNumber.png)  |
-| oneTextFourNumber  | Display one text values and four number values  | ![oneTextFourNumber](./images/OneTextFourNumber.png)  |
-| oneTextThreeNumber  | Display one text values and three number values  | ![oneTextThreeNumber](./images/OneTextThreeNumber.png)  |
-| oneTextTwoNumber  | Display one text values and two number values  | ![oneTextTwoNumber](./images/OneTextTwoNumber.png)  |
-| oneTextOneNumber  | Display one text values and one number value  | ![Sample](./images/OneTextOneNumber.png)  |
-| oneText  | Display one text value  | ![oneText](./images/OneText.png)  |
-| twoText  | Display two text values  | ![twoText](./images/TwoText.png)  |
+| twoTextFourNumber  | Display two text values and four number values  | ![twoTextFourNumber](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/TwoTextFourNumber.png)  |
+| twoTextThreeNumber  | Display two text values and three number values  | ![twoTextThreeNumber](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/TwoTextThreeNumber.png)  |
+| twoTextTwoNumber  | Display two text values and two number values  | ![twoTextTwoNumber](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/TwoTextTwoNumber.png)  |
+| twoTextOneNumber  | Display two text values and one number value  | ![twoTextOneNumber](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/TwoTextOneNumber.png)  |
+| oneTextFourNumber  | Display one text values and four number values  | ![oneTextFourNumber](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/OneTextFourNumber.png)  |
+| oneTextThreeNumber  | Display one text values and three number values  | ![oneTextThreeNumber](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/OneTextThreeNumber.png)  |
+| oneTextTwoNumber  | Display one text values and two number values  | ![oneTextTwoNumber](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/OneTextTwoNumber.png)  |
+| oneTextOneNumber  | Display one text values and one number value  | ![Sample](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/OneTextOneNumber.png)  |
+| oneText  | Display one text value  | ![oneText](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/OneText.png)  |
+| twoText  | Display two text values  | ![twoText](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/TwoText.png)  |
 
 ## Usage
 
@@ -156,7 +156,7 @@ Please have a look at the following link to know how to setup the environment fo
 1. Install dependencies
 
    ```bash
-   yarn install
+   yarn install --pure-lockfile
    ```
 
 2. Build plugin in development mode or run in watch mode
@@ -179,9 +179,7 @@ Please have a look at the following link to know how to setup the environment fo
 
 ## Known issues
 
-[Open bug on ReactFlow](https://github.com/wbkd/react-flow/issues/1979)
-
-In order to fix the above issue a minor modification is required to the D3 zoom implementation after executing yarn install to install the dependencies. The fix is described [here](https://github.com/wbkd/react-flow/issues/1979#issuecomment-1087655377) and [here](https://github.com/d3/d3-zoom/commit/0a942f763afc7813d4b1186a1928fcd8f276cf84). After applying the above fix to D3 zoom, it is not possible to zoom in / out using the controls of ReactFlow. Hence in this implementation the zoom in / out controls has been hidden. It is still possible to zoom in / out using the mouse wheel.
+No open issue.
 
 ## Contact / Getting help
 
