@@ -15,8 +15,6 @@ import {
 
 function TwoTextThreeNumber({ data }: { data: DirectedGraphVertex }) {
 
-    console.log("Rendering TwoTextThreeNumber");
-
     const theme2 = useTheme2();
 
     return (

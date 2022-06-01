@@ -15,8 +15,6 @@ import {
 
 function OneTextThreeNumber({ data }: { data: DirectedGraphVertex }) {
 
-    console.log("Rendering OneTextThreeNumber");
-
     const theme2 = useTheme2();
 
     return (

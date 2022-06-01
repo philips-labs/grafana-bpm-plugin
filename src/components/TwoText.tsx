@@ -15,8 +15,6 @@ import {
 
 function TwoText({ data }: { data: DirectedGraphVertex }) {
 
-    console.log("Rendering TwoText");
-
     const theme2 = useTheme2();
 
     return (

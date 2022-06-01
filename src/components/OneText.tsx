@@ -15,8 +15,6 @@ import {
 
 function OneText({ data }: { data: DirectedGraphVertex }) {
 
-    console.log("Rendering OneText");
-
     const theme2 = useTheme2();
 
     return (

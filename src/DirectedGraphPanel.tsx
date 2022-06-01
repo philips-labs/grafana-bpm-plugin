@@ -88,7 +88,7 @@ const onNodeClick = (event: React.MouseEvent, node: Node) => {
     if (node.data && node.data.url && node.data.url.startsWith('http')) {
         window.open(node.data.url, '_blank');
     } else {
-        console.log('Node does not have valid URL.');
+        console.error('Node does not have valid URL.');
     }
 }
 
@@ -103,10 +103,13 @@ export const DirectedGraphPanel: React.FC<Props> = ({ options, data, width, heig
     const [nodes, setNodes] = useNodesState([])
     const [edges, setEdges] = useEdgesState([])
     const [shouldLayout, setShouldLayout] = useState<boolean>(true);
+    const [errorInInputs, setErrorInInputs] = useState<boolean>(false);
     const [errorInData, setErrorInData] = useState<boolean>(false);
     const [isDragable, setIsDragable] = useState<boolean>(false);
     const [showMiniMap, setShowMiniMap] = useState<boolean>(false);
     const [minimumZoom, setMinimumZoom] = useState(0.05);
+    const [startTime, setStartTime] = useState(data.request?.startTime);
+    const [endtTime, setEndTime] = useState(data.request?.endTime);
 
     const styles = useStyles(getStyles);
 
@@ -115,10 +118,14 @@ export const DirectedGraphPanel: React.FC<Props> = ({ options, data, width, heig
         setIsDragable(options.isDragable);
         setShouldLayout(true);
     }
+
+    // Has the option to show / hide moni map changed?
     if (showMiniMap !== options.showMiniMap) {
         setShowMiniMap(options.showMiniMap);
         setShouldLayout(true);
     }
+
+    // Has the minimum zoom changed?
     if (minimumZoom !== options.minimumZoom) {
         setMinimumZoom(options.minimumZoom);
         setShouldLayout(true);
@@ -126,12 +133,15 @@ export const DirectedGraphPanel: React.FC<Props> = ({ options, data, width, heig
 
     // We should have two data series - if not then just render an error.
     if (data && data.series && data.series.length !== 2) {
-        return (
-            <div className={styles.centeredTextBox}>
-                <h1>Error in Data Source Configuration</h1>
-                <p>The data source must contain two data series. The first data series must contain array of nodes. The second data series must contain series of edges.</p>
-            </div>
-        )
+        setErrorInInputs(true);
+        setShouldLayout(true);
+    }
+
+    // Has the time range changed? If yes then we should layout
+    if (startTime !== data.request?.startTime || endtTime !== data.request?.endTime) {
+        setStartTime(data.request?.startTime);
+        setEndTime(data.request?.endTime);
+        setShouldLayout(true);
     }
 
     useEffect(() => {
@@ -241,7 +251,14 @@ export const DirectedGraphPanel: React.FC<Props> = ({ options, data, width, heig
 
     }, [shouldLayout]);
 
-    if (errorInData) {
+    if (errorInInputs) {
+        return (
+            <div className={styles.centeredTextBox}>
+                <h1>Error in Data Source Configuration</h1>
+                <p>The data source must contain two data series. The first data series must contain array of nodes. The second data series must contain series of edges.</p>
+            </div>
+        )
+    } else if (errorInData) {
         // Render error tile - this is related to some issue with data
         return (
             <div className={styles.centeredTextBox}>
@@ -260,7 +277,7 @@ export const DirectedGraphPanel: React.FC<Props> = ({ options, data, width, heig
                 onNodeClick={onNodeClick}
                 minZoom={minimumZoom}
                 nodeTypes={nodeTypes}>
-                <Controls showZoom={false} showInteractive={false} />
+                <Controls showInteractive={false} />
                 {showMiniMap && <MiniMap />}
             </ReactFlow>
         )
