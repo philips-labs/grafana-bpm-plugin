@@ -10,7 +10,7 @@
 
 ![Screenshot 1](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/images/screenshot1.png)
 
-See the [nodes.json](./sample_data/nodes.json) and [edges.json](./sample_data/edges.json) in the sample_data folder for data behind the above graph.
+See the [nodes.json](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/sample_data/nodes.json) and [edges.json](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/sample_data/edges.json) in the sample_data folder for data behind the above graph.
 
 ## Dependencies
 
@@ -183,11 +183,11 @@ No open issue.
 
 ## Contact / Getting help
 
-Write an email to [MAINTAINERS](MAINTAINERS.md)
+Write an email to [MAINTAINERS](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/MAINTAINERS.md)
 
 ## License
 
-Link to [LICENSE](LICENSE)
+Link to [LICENSE](https://raw.githubusercontent.com/philips-labs/grafana-bpm-plugin/main/LICENSE)
 
 ## Credits and references
 
